@@ -31,13 +31,13 @@ const Card = ({ user, setrefetch }) => {
     }
   };
   return (
-    <div className="bg-[#0F0F0F] relative overflow-hidden transition-all duration-500 ease-in-out w-[180px] h-[180px] shadow-lg rounded-lg border-[1px] border-gray-600 hover:border-gray-400  flex flex-col p-2">
-      <span className="text-gray-200 font-bold">{user.subject.length >= 15 ? user.subject.slice(0,15) + " ...": user.subject}</span>
+    <div className="bg-[#0F0F0F] relative overflow-hidden transition-all duration-500 ease-in-out w-[280px] h-[180px] shadow-lg rounded-lg border-[1px] border-gray-600 hover:border-gray-400  flex flex-col p-2">
+      <span className="text-gray-200 font-bold">{user.subject.length >= 30 ? user.subject.slice(0,30) + " ...": user.subject}</span>
       <span className="text-[#808389] font-semibold text-xs flex gap-1 items-center">
         <Clock2 size={16} color="#808389" strokeWidth={1} />
         {actualTime}
       </span>
-      <span className="text-gray-100 text-sm">{user.description.length >= 90 ? user.description.slice(0,80) + " . . .": user.description}</span>
+      <span className="text-gray-100 text-sm">{user.description.length >= 1500 ? user.description.slice(0,150) + " . . .": user.description}</span>
       <span className="text-[#808389] font-semibold text-xs flex gap-1 items-center absolute bottom-2">
         <Calendar size={16} color="#808389" strokeWidth={1} />
         {user.date}
